@@ -1,97 +1,121 @@
-# Cosmatics 💄
+# 💄 Cosmetics E-Commerce
 
-A modern e-commerce front-end for women's beauty products, bags, and shoes — built with React and Vite.
+A modern and responsive e-commerce web application built with **React** and **Vite**, allowing users to browse beauty products, women's bags, and shoes with a smooth and interactive shopping experience.
+
+## 🔗 Live Demo
+
+👉 https://cosmetics-ecommerce.vercel.app/
+
+## 📂 GitHub Repository
+
+👉 https://github.com/heba-ismael/cosmetics-ecommerce
+
+---
 
 ## ✨ Features
 
-- Browse products by category (Beauty, Women's Bags, Women's Shoes)
-- Live search with instant suggestions
-- Product details page with image gallery and related products
-- Shopping cart with quantity control (persisted in localStorage)
-- Favorites / wishlist (persisted in localStorage)
-- Demo authentication (Sign In / Sign Up) using the DummyJSON API
-- Fully responsive design (mobile, tablet, desktop)
-- Toast notifications for cart, favorites, and share actions
-- Code-split routes for faster initial load
-- Global error boundary
+- 🛍 Browse products by category
+- 🔍 Live search with instant suggestions
+- 📄 Product details page
+- 🖼 Product image gallery
+- ❤️ Add & remove favorites
+- 🛒 Shopping cart with quantity control
+- 💾 Cart & favorites saved in Local Storage
+- 🔐 Demo authentication (Sign In / Sign Up)
+- 🔄 Related products
+- 🔔 Toast notifications
+- 📱 Fully responsive design
+- ⚡ Lazy loading & code splitting
+- 🎬 Smooth page transitions
+- 🛡 Error Boundary for better error handling
 
-## 🛠️ Built With
+---
 
-- [React 19](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [React Router](https://reactrouter.com/)
-- [Framer Motion](https://www.framer.com/motion/) — page transitions
-- [Swiper](https://swiperjs.com/) — hero and product sliders
-- [React Hot Toast](https://react-hot-toast.com/) — notifications
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [DummyJSON](https://dummyjson.com/) — mock product & auth API
+## 🛠 Tech Stack
 
-## 📸 Screenshots
+- React 19
+- Vite
+- React Router DOM
+- Context API
+- Framer Motion
+- Swiper.js
+- React Hot Toast
+- React Icons
+- DummyJSON API
 
-> _Add screenshots or a short GIF of the app here._
+---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Installation
+## 🚀 Installation
 
 ```bash
-git clone https://github.com/your-username/cosmatics.git
-cd cosmatics
+git clone https://github.com/heba-ismael/cosmetics-ecommerce.git
+
+cd cosmetics-ecommerce
+
 npm install
-```
 
-### Environment Variables
-
-Create a `.env` file in the root (see `.env.example`):
-
-```
-VITE_API_BASE_URL=https://dummyjson.com
-```
-
-### Run Locally
-
-```bash
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
+The application will run at:
 
-### Build for Production
-
-```bash
-npm run build
-npm run preview
 ```
+http://localhost:5173
+```
+
+---
+
+## 🌍 Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_API_BASE_URL=https://dummyjson.com
+```
+
+---
 
 ## 🔑 Demo Login
 
-This project uses [DummyJSON](https://dummyjson.com/docs/auth) as a mock backend, so sign-up doesn't persist real accounts. To try the Sign In flow, use:
+**Username**
 
-- **Username:** `emilys`
-- **Password:** `emilyspass`
+```
+emilys
+```
+
+**Password**
+
+```
+emilyspass
+```
+
+---
 
 ## 📁 Project Structure
 
 ```
-src/
-├── api/              # Centralized API calls
-├── components/       # Reusable components (header, product card, context, etc.)
-├── hooks/            # Custom hooks (useFetch)
-├── page/             # Route-level pages
-├── constants.js      # Shared app-wide constants
-└── App.jsx           # Routes definition
+src
+├── api
+├── components
+├── hooks
+├── img
+├── page
+├── constants.js
+├── App.jsx
+└── main.jsx
 ```
 
-## 🧭 Known Limitations
+---
 
-- Checkout is simulated (no real payment/shipping flow)
-- Sign Up is simulated (DummyJSON doesn't persist new users)
-- No pagination yet — categories load a fixed number of products
+## ⚠ Known Limitations
+
+- Checkout process is simulated.
+- Authentication uses the DummyJSON mock API.
+- No real payment integration.
+- No backend database.
+- No pagination.
+
+---
 
 ## 📄 License
 
