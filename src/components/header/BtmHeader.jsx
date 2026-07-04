@@ -1,14 +1,10 @@
 import { RiArrowDropDownFill } from "react-icons/ri";
 import { IoMenu } from "react-icons/io5";
-import { useContext, useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { PiSignInBold } from "react-icons/pi";
-import { FaUserPlus, FaSignOutAlt } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { getAllCategories } from "../../api/api";
 import { SITE_CATEGORIES } from "../../constants";
-import { AuthContext } from "../Context/AuthContext";
-import toast from "react-hot-toast";
 
 const NavLinks = [
   { title: "Home", link: "/" },
@@ -18,8 +14,6 @@ const NavLinks = [
 
 function BtmHeader() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { user, logout } = useContext(AuthContext);
 
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
@@ -32,12 +26,6 @@ function BtmHeader() {
   const categories = (allCategories || []).filter((cat) =>
     SITE_CATEGORIES.includes(cat.slug),
   );
-
-  const handleLogout = () => {
-    logout();
-    toast.success("Signed out successfully");
-    navigate("/");
-  };
 
   return (
     <div className="btm_header">
@@ -77,30 +65,6 @@ function BtmHeader() {
             ))}
           </ul>
         </nav>
-
-        <div className="sign_regs_icon">
-          {user ? (
-            <>
-              <span className="welcome_user">Hi, {user.firstName}</span>
-              <button
-                type="button"
-                onClick={handleLogout}
-                aria-label="Sign Out"
-              >
-                <FaSignOutAlt />
-              </button>
-            </>
-          ) : (
-            <>
-              <Link to="/signin" aria-label="Sign In">
-                <PiSignInBold />
-              </Link>
-              <Link to="/signup" aria-label="Sign Up">
-                <FaUserPlus />
-              </Link>
-            </>
-          )}
-        </div>
       </div>
     </div>
   );

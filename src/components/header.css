@@ -85,6 +85,24 @@ header{
     font-size: 9px;
     border-radius: 100%;
 }
+.top_header .header_icons .account_icon{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.top_header .header_icons .account_icon button{
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+}
+.top_header .header_icons .account_icon svg{
+    fill: #d41756;
+}
+.top_header .header_icons .welcome_user{
+    font-size: 13px;
+    color: var(--main_color);
+    white-space: nowrap;
+}
 .btm_header{
     background: var(--main_color);
 }
@@ -182,28 +200,6 @@ background: #d41756;
     color: var(--white-color);
 }
 
-.btm_header .sign_regs_icon{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-.btm_header .sign_regs_icon svg{
-    font-size: 24px;
-    fill: var(--white-color);
-    
-}
-.btm_header .sign_regs_icon button{
-    background: transparent;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-.btm_header .sign_regs_icon .welcome_user{
-    color: var(--white-color);
-    font-size: 14px;
-    white-space: nowrap;
-}
 .searchBox_Container{
     position: relative;
     width: 500px;
@@ -310,18 +306,23 @@ background: #d41756;
     .btm_header .nav{
         width: 100%;
         justify-content: space-between;
-        overflow-x: auto;
     }
-    .btm_header .sign_regs_icon{
-        display: none;
+    .btm_header .nav_links{
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 
 @media (max-width: 480px){
-    .btm_header .nav_links{
-        display: none;
-    }
     .btm_header .nav{
         justify-content: flex-start;
+        gap: 10px;
+    }
+    .btm_header .nav_links li{
+        padding: 0 10px;
+        font-size: 13px;
+    }
+    .top_header .header_icons .welcome_user{
+        display: none;
     }
 }
