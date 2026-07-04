@@ -4,7 +4,7 @@ A modern and responsive e-commerce web application built with **React** and **Vi
 
 ## 🔗 Live Demo
 
-👉 https://cosmetics-ecommerce.vercel.app/
+👉 https://cosmatics-ecommerce.vercel.app/
 
 ## 📂 GitHub Repository
 
