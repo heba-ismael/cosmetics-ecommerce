@@ -90,7 +90,7 @@ function Products({ item }) {
 
         <StarRating rating={item.rating || 0} />
         <p className="price">
-          <span>${item.price}</span>
+          <span>${item.price ?? "—"}</span>
         </p>
       </Link>
 

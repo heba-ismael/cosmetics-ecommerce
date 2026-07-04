@@ -26,8 +26,6 @@ header{
 }
 .top_header .logo{
     width: 70px;
-    margin-left: 400px;
-    
 }
 .top_header .search_box{
     width: 100%;
@@ -59,8 +57,8 @@ header{
 
 .top_header .header_icons{
     display:flex;
+    align-items: center;
     gap: 15px;
-    margin-right: 200px;
     overflow: visible;
 }
 .top_header .header_icons .icon{
@@ -88,20 +86,37 @@ header{
 .top_header .header_icons .account_icon{
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
 }
-.top_header .header_icons .account_icon button{
+.top_header .header_icons .text_link{
+    display: flex;
+    align-items: center;
+    gap: 6px;
     background: transparent;
     cursor: pointer;
-    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color_heading);
+    white-space: nowrap;
 }
-.top_header .header_icons .account_icon svg{
-    fill: #d41756;
+.top_header .header_icons .text_link:hover{
+    color: var(--main_color);
+}
+.top_header .header_icons .text_link svg{
+    fill: var(--main_color);
+    font-size: 16px;
 }
 .top_header .header_icons .welcome_user{
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 600;
     color: var(--main_color);
     white-space: nowrap;
+}
+.top_header .header_icons .icons_divider{
+    width: 1px;
+    height: 26px;
+    background: #e2e2e2;
+    margin: 0 20px;
 }
 .btm_header{
     background: var(--main_color);
@@ -159,7 +174,8 @@ clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content: flex-start;
+    gap: 10px;
     align-items: center;
     background: var(--main_color);
     padding: 0 15px;
@@ -294,6 +310,13 @@ background: #d41756;
     }
     .top_header .header_icons{
         order: 2;
+        gap: 15px;
+    }
+    .top_header .header_icons .icons_divider{
+        margin: 0 12px;
+    }
+    .top_header .header_icons .account_icon{
+        gap: 12px;
     }
     .searchBox_Container{
         order: 3;
@@ -324,5 +347,14 @@ background: #d41756;
     }
     .top_header .header_icons .welcome_user{
         display: none;
+    }
+    .top_header .header_icons .text_link span{
+        display: none;
+    }
+    .top_header .header_icons .icons_divider{
+        margin: 0 8px;
+    }
+    .top_header .header_icons .account_icon{
+        gap: 10px;
     }
 }

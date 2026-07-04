@@ -67,6 +67,9 @@ a{
   align-items: center;
   transition: 0.3s;
   width: max-content;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
 }
 .btn:hover{
   scale: 1.1;

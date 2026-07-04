@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 
 function ProductImages({ product }) {
-  const [activeImage, setActiveImage] = useState(product.images[0]);
+  // dummyjson كتير بيرجع نفس الصورة مكررة أكتر من مرة في نفس المنتج
+  const uniqueImages = [...new Set(product.images)];
+
+  const [activeImage, setActiveImage] = useState(uniqueImages[0]);
 
   // When the user opens a different product, reset to its first image
   useEffect(() => {
-    setActiveImage(product.images[0]);
+    setActiveImage(uniqueImages[0]);
   }, [product]);
 
   return (
@@ -14,8 +17,11 @@ function ProductImages({ product }) {
         <img src={activeImage} alt={product.title} />
       </div>
       <div className="sm_img">
-        {product.images.map((img, index) => (
-          <div className="img_div_sm" key={index}>
+        {uniqueImages.map((img, index) => (
+          <div
+            className={`img_div_sm ${img === activeImage ? "active" : ""}`}
+            key={index}
+          >
             <img
               src={img}
               alt={`${product.title} - photo ${index + 1}`}

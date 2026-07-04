@@ -31,20 +31,22 @@ function Home() {
       <div>
         <HeroSlider />
 
-        {error && (
-          <p className="fetch_error">Something went wrong while loading products. Please try again.</p>
-        )}
+        <div id="shop-section">
+          {error && (
+            <p className="fetch_error">Something went wrong while loading products. Please try again.</p>
+          )}
 
-        {loading
-          ? categories.map((category) => <SlideProductLoading key={category} />)
-          : !error &&
-            categories.map((category) => (
-              <SlideProducts
-                key={category}
-                data={products?.[category] || []}
-                title={category.replace("-", " ")}
-              />
-            ))}
+          {loading
+            ? categories.map((category) => <SlideProductLoading key={category} />)
+            : !error &&
+              categories.map((category) => (
+                <SlideProducts
+                  key={category}
+                  data={products?.[category] || []}
+                  title={category.replace("-", " ")}
+                />
+              ))}
+        </div>
       </div>
     </PageTransition>
   );

@@ -89,6 +89,10 @@ border-color: var(--main_color);
 .product .price{
     font-weight: bold;
     font-size: 20px;
+    margin-top: 8px;
+}
+.product .price span{
+    color: var(--main_color);
 }
 .product .icons{
 position: absolute;
@@ -175,6 +179,12 @@ width: 350px;
 .products_loading .content{
     height: 30px;
     margin-bottom: 10px;
+}
+
+/* Swiper navigation arrows - site brand color instead of Swiper's default blue */
+.Slide_Products .swiper-button-next,
+.Slide_Products .swiper-button-prev{
+    color: var(--main_color);
 }
 
 /* ===== Responsive ===== */

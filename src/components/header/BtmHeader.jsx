@@ -1,4 +1,3 @@
-import { RiArrowDropDownFill } from "react-icons/ri";
 import { IoMenu } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -41,7 +40,6 @@ function BtmHeader() {
             >
               <IoMenu />
               <p> Browse Category</p>
-              <RiArrowDropDownFill />
             </button>
             <div
               className={`category_nav_list ${isCategoryOpen ? "active" : ""}`}

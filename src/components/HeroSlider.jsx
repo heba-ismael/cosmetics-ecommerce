@@ -3,12 +3,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import {Autoplay, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
+
 import heroImg1 from "../img/k.avif";
 import heroImg2 from "../img/images (1).jpg";
 import heroImg3 from "../img/sss.jpg";
 
 function HeroSlider() {
+  const scrollToShop = () => {
+    document.getElementById("shop-section")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="hero">
@@ -31,9 +35,9 @@ function HeroSlider() {
                   <br />
                 </h3>
                 <p> Best Beauty Products </p>
-                <Link to="/" className="btn">
+                <button type="button" onClick={scrollToShop} className="btn">
                   Shop Now
-                </Link>
+                </button>
               </div>
               <img
                 src={heroImg1}
@@ -50,9 +54,9 @@ function HeroSlider() {
                   <br />
                 </h3>
                 <p>Best Beauty Products </p>
-                <Link to="/" className="btn">
+                <button type="button" onClick={scrollToShop} className="btn">
                   Shop Now
-                </Link>
+                </button>
               </div>
               <img
                 src={heroImg2}
@@ -69,9 +73,9 @@ function HeroSlider() {
                   <br />
                 </h3>
                 <p> Best Beauty Products</p>
-                <Link to="/" className="btn">
+                <button type="button" onClick={scrollToShop} className="btn">
                   Shop Now
-                </Link>
+                </button>
               </div>
               <img src={heroImg3} alt="Beauty and fashion collection preview 3" loading="lazy" />
             </SwiperSlide>

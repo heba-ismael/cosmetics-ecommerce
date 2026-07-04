@@ -34,22 +34,24 @@ const handleLogout = () => {
 
        <div className="header_icons">
         {user ? (
-          <div className="icon account_icon">
-            <button type="button" onClick={handleLogout} aria-label="Sign Out">
-              <FaSignOutAlt />
-            </button>
+          <div className="account_icon">
             <span className="welcome_user">Hi, {user.firstName}</span>
+            <button type="button" onClick={handleLogout} className="text_link">
+              <FaSignOutAlt /> <span>Sign Out</span>
+            </button>
           </div>
         ) : (
-          <div className="icon account_icon">
-            <Link to="/signin" aria-label="Sign In">
-              <PiSignInBold />
+          <div className="account_icon">
+            <Link to="/signin" className="text_link">
+              <PiSignInBold /> <span>Sign In</span>
             </Link>
-            <Link to="/signup" aria-label="Sign Up">
-              <FaUserPlus />
+            <Link to="/signup" className="text_link">
+              <FaUserPlus /> <span>Sign Up</span>
             </Link>
           </div>
         )}
+
+        <span className="icons_divider"></span>
 
         <div className="icon">
            <Link to="/favorites" aria-label={`Favorites, ${favorites.length} items`}>
