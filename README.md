@@ -107,6 +107,7 @@ src
 
 ---
 
+<<<<<<< HEAD
 ## ⚠ Known Limitations
 
 - Checkout process is simulated.
@@ -120,3 +121,8 @@ src
 ## 📄 License
 
 This project is licensed under the MIT License.
+=======
+- Checkout is simulated (no real payment/shipping flow)
+- Sign Up is simulated (DummyJSON doesn't persist new users)
+- No pagination yet — categories load a fixed number of products
+>>>>>>> c585460 (update)
