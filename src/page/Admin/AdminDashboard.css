@@ -1,0 +1,237 @@
+.admin_page{
+  padding: 30px 20px 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.admin_preview_banner{
+  background: #fff4e5;
+  color: #7a5416;
+  border: 1px solid #f0c674;
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+:root[data-theme="dark"] .admin_preview_banner{
+  background: #4a3a1f;
+  color: #ffcb7d;
+  border-color: #6b5228;
+}
+
+.admin_layout{
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.admin_sidebar{
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--card_bg);
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.admin_sidebar button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color_heading);
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.admin_sidebar button svg{
+  font-size: 18px;
+  fill: var(--p_color);
+}
+
+.admin_sidebar button.active{
+  background: var(--main_color);
+  color: var(--white-color);
+}
+
+.admin_sidebar button.active svg{
+  fill: var(--white-color);
+}
+
+.admin_content{
+  flex: 1;
+  min-width: 0;
+}
+
+.admin_content h1{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.admin_section_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin_section_header h1{
+  margin-bottom: 0;
+}
+
+.stat_cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.stat_card{
+  background: var(--card_bg);
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+  padding: 20px 25px;
+  min-width: 160px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat_label{
+  font-size: 13px;
+  color: var(--p_color);
+}
+
+.stat_value{
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--main_color);
+}
+
+.admin_table_wrapper{
+  overflow-x: auto;
+  background: var(--card_bg);
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+}
+
+.admin_table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin_table th{
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border_color);
+  color: var(--p_color);
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.admin_table td{
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border_color);
+  color: var(--color_heading);
+  white-space: nowrap;
+}
+
+.admin_table img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.admin_row_actions{
+  display: flex;
+  gap: 8px;
+}
+
+.admin_row_actions button{
+  background: var(--bg_color);
+  color: var(--color_heading);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.admin_row_actions button.danger{
+  background: #fde2e2;
+  color: #c0392b;
+}
+
+.status_pill{
+  background: #fff4e5;
+  color: #b5720a;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+:root[data-theme="dark"] .status_pill{
+  background: #4a3a1f;
+  color: #ffcb7d;
+}
+
+.category_cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category_card{
+  background: var(--card_bg);
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-width: 180px;
+  text-transform: capitalize;
+}
+
+.category_card p{
+  color: var(--color_heading);
+  font-weight: 600;
+}
+
+.category_card button{
+  background: var(--bg_color);
+  color: var(--color_heading);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@media (max-width: 768px){
+  .admin_layout{
+    flex-direction: column;
+  }
+  .admin_sidebar{
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .admin_sidebar button{
+    white-space: nowrap;
+  }
+}
