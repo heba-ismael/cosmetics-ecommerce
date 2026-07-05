@@ -21,12 +21,13 @@
 }
 
 .auth_note{
-  background: #fff;
+  background: var(--card_bg);
   border-left: 3px solid var(--main_color);
   padding: 10px 14px;
   font-size: 13px;
   margin-bottom: 20px;
   border-radius: 4px;
+  color: var(--color_heading);
 }
 
 .auth_form label{
@@ -40,7 +41,8 @@
   padding: 12px 14px;
   border-radius: 6px;
   border: 1px solid var(--border_color);
-  background: #fff;
+  background: var(--card_bg);
+  color: var(--color_heading);
   font-family: inherit;
 }
 

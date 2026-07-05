@@ -16,12 +16,22 @@
   --white-color:#fff;
   --color_heading:#253237;
   --border_color:#d6d6d6d5;
+  --card_bg:#fff;
+}
+
+:root[data-theme="dark"]{
+  --p_color:#b3b3b3;
+  --bg_color:#242424;
+  --color_heading:#f2f2f2;
+  --border_color:#3a3a3a;
+  --card_bg:#1e1e1e;
 }
 
 body{
-  background-color: #fff;
+  background-color: var(--card_bg);
   font-family: "Inter", sans-serif;
   padding-top: 150px;
+  transition: background-color 0.3s, color 0.3s;
 }
  
 img{
@@ -42,6 +52,19 @@ p{
 input,button,select,textarea{
   outline: none;
   border: none;
+}
+
+/* Visible focus ring for keyboard navigation only (accessibility) —
+   doesn't show on mouse clicks, only on Tab/keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible{
+  outline: 2px solid var(--main_color);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 a{
@@ -73,6 +96,18 @@ a{
 }
 .btn:hover{
   scale: 1.1;
+}
+
+/* Respect the OS-level "reduce motion" setting across the whole site */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 

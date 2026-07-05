@@ -123,6 +123,12 @@ background: var(--main_color);
 .item_details .details_item .icons button.in-fav svg{
 fill: var(--white-color);
 }
+.item_details .details_item .icons button.shared{
+background: #2ecc71;
+}
+.item_details .details_item .icons button.shared svg{
+fill: var(--white-color);
+}
 .item_details .details_item .btn svg{
     font-size: 20px;
 }

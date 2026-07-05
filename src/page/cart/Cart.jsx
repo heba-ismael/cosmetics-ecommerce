@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { CartContext } from "../../components/Context/CartContext"
 import { FaTrashAlt } from "react-icons/fa"
 import toast from "react-hot-toast"
@@ -12,14 +13,17 @@ useEffect(() => {
   document.title = "Cart | Cosmatics";
 }, []);
 
-const {cartItems ,increaseQuantity,decreaseQuantity,removeFormCart} = useContext(CartContext)
+const navigate = useNavigate();
+const {cartItems ,increaseQuantity,decreaseQuantity,removeFormCart,placeOrder} = useContext(CartContext)
 
 const total = cartItems.reduce((acc , item)=>acc + item.price * item.quantity ,0)
 
 const handlePlaceOrder = (e) => {
   e.preventDefault();
   if (cartItems.length === 0) return;
+  placeOrder();
   toast.success("Your order has been placed successfully!");
+  navigate("/orders");
 };
 
   return (
@@ -43,13 +47,13 @@ const handlePlaceOrder = (e) => {
                        <h4>{item.title}</h4>
                        <p className="price_item">${item.price}</p>
                        <div className="quantity_control">
-                        <button onClick={()=>decreaseQuantity(item.id)} >-</button>
+                        <button onClick={()=>decreaseQuantity(item.id)} aria-label={`Decrease quantity of ${item.title}`}>-</button>
                         <span className="quantity">{item.quantity}</span>
-                        <button onClick={()=>increaseQuantity(item.id)}>+</button>
+                        <button onClick={()=>increaseQuantity(item.id)} aria-label={`Increase quantity of ${item.title}`}>+</button>
                        </div>
                     </div>
                   </div>
-                   <button  onClick={()=>removeFormCart(item.id)} className="delete_item"><FaTrashAlt /></button>
+                   <button  onClick={()=>removeFormCart(item.id)} className="delete_item" aria-label={`Remove ${item.title} from cart`}><FaTrashAlt /></button>
                 </div>
               ) )
              )

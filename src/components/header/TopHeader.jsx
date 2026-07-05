@@ -5,10 +5,12 @@ import Logo from "../../img/makeup-brushes.png"
 import { FaRegHeart, FaUserPlus, FaSignOutAlt } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 import { PiSignInBold } from "react-icons/pi";
+import { FiSun, FiMoon } from "react-icons/fi";
 import "../header.css"
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import { AuthContext } from "../Context/AuthContext";
+import { ThemeContext } from "../Context/ThemeContext";
 import SearchBox from "./SearchBox";
 import toast from "react-hot-toast";
 
@@ -16,6 +18,7 @@ function TopHeader() {
 
 const { cartItems ,favorites} = useContext(CartContext);
 const { user, logout } = useContext(AuthContext);
+const { theme, toggleTheme } = useContext(ThemeContext);
 const navigate = useNavigate();
 
 const handleLogout = () => {
@@ -33,6 +36,15 @@ const handleLogout = () => {
 
 
        <div className="header_icons">
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="theme_toggle"
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {theme === "dark" ? <FiSun /> : <FiMoon />}
+        </button>
+
         {user ? (
           <div className="account_icon">
             <span className="welcome_user">Hi, {user.firstName}</span>

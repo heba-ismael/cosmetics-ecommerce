@@ -8,6 +8,7 @@ import { SITE_CATEGORIES } from "../../constants";
 const NavLinks = [
   { title: "Home", link: "/" },
   { title: "About", link: "/about" },
+  { title: "Orders", link: "/orders" },
   { title: "Contact", link: "/contact" },
 ];
 

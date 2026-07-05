@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useCallback, useMemo, useState } from "react";
 import { loginUser } from "../../api/api";
 
 export const AuthContext = createContext();
@@ -12,7 +12,7 @@ export default function AuthProvider({ children }) {
   const [authLoading, setAuthLoading] = useState(false);
   const [authError, setAuthError] = useState(null);
 
-  const login = async (username, password) => {
+  const login = useCallback(async (username, password) => {
     setAuthLoading(true);
     setAuthError(null);
     try {
@@ -26,17 +26,20 @@ export default function AuthProvider({ children }) {
     } finally {
       setAuthLoading(false);
     }
-  };
+  }, []);
 
-  const logout = () => {
+  const logout = useCallback(() => {
     setUser(null);
     localStorage.removeItem("authUser");
-  };
+  }, []);
+
+  const value = useMemo(
+    () => ({ user, login, logout, authLoading, authError }),
+    [user, login, logout, authLoading, authError],
+  );
 
   return (
-    <AuthContext.Provider
-      value={{ user, login, logout, authLoading, authError }}
-    >
+    <AuthContext.Provider value={value}>
       {children}
     </AuthContext.Provider>
   );

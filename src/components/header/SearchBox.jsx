@@ -62,10 +62,11 @@ function SearchBox() {
           name="search"
           id="search"
           placeholder="Search For Products"
+          aria-label="Search for products"
           onChange={(e) => setSearchTerm(e.target.value)}
           autoComplete="off"
         />
-        <button type="submit">
+        <button type="submit" aria-label="Submit search">
           <BsSearchHeart />
         </button>
       </form>

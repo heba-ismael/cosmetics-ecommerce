@@ -16,6 +16,7 @@ const ProductDetails = lazy(() => import("./page/productDetails/ProductDetails")
 const CategoryPage = lazy(() => import("./page/CategoryPage/CategoryPage"));
 const About = lazy(() => import("./page/About/About"));
 const Contact = lazy(() => import("./page/Contact/Contact"));
+const Orders = lazy(() => import("./page/Orders/Orders"));
 const SignIn = lazy(() => import("./page/SignIn/SignIn"));
 const SignUp = lazy(() => import("./page/SignUp/SignUp"));
 const NotFound = lazy(() => import("./page/NotFound/NotFound"));
@@ -56,6 +57,7 @@ function App() {
               <Route path="/category/:category" element={<CategoryPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/orders" element={<Orders />} />
               <Route path="/signin" element={<SignIn />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="*" element={<NotFound />} />

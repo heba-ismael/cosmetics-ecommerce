@@ -13,7 +13,7 @@ header{
     left: 0;
     right: 0;
     z-index: 10000;
-    background: var(--white-color);
+    background: var(--card_bg);
 }
 
 
@@ -88,6 +88,28 @@ header{
     align-items: center;
     gap: 18px;
 }
+.top_header .header_icons .theme_toggle{
+    background: var(--bg_color);
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.top_header .header_icons .theme_toggle:hover{
+    background: var(--main_color);
+}
+.top_header .header_icons .theme_toggle svg{
+    font-size: 18px;
+    fill: var(--main_color);
+    transition: 0.3s;
+}
+.top_header .header_icons .theme_toggle:hover svg{
+    fill: var(--white-color);
+}
 .top_header .header_icons .text_link{
     display: flex;
     align-items: center;
@@ -144,7 +166,7 @@ header{
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--white-color);
+    background: var(--card_bg);
     border: 1px solid #999;
     border-top:0 ;
     display: flex;
@@ -226,7 +248,7 @@ background: #d41756;
     top: 100%;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: var(--card_bg);
     list-style: none;
     margin: 0;
     padding: 0;

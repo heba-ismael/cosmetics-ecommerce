@@ -34,7 +34,7 @@
 /*product*/
 .product{
     width: 250px;
-    background: var(--white-color);
+    background: var(--card_bg);
     padding: 25px 15px;
     border: 1px solid var(--border_color);
     transition: 0.3s;
@@ -46,6 +46,7 @@
 .product:hover{
 box-shadow: 10px 10px 15px #9494941b;
 border-color: var(--main_color);
+transform: translateY(-4px);
 }
 .product .img_product{
     position: relative;
@@ -127,6 +128,13 @@ transition: 0.3s;
 
 .product .icons button.in-fav svg{
   fill: var(--white-color);
+}
+
+.product .icons button.shared{
+    background: #2ecc71;
+}
+.product .icons button.shared svg{
+    fill: var(--white-color);
 }
 
 .product.in-cart .icons .btn_addcart{

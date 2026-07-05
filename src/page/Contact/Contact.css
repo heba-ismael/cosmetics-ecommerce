@@ -82,11 +82,17 @@
   margin-top: 14px;
 }
 
+:root[data-theme="dark"] .contact_form label{
+  color: var(--main_color);
+}
+
 .contact_form input,
 .contact_form textarea{
   padding: 12px 14px;
   border-radius: 6px;
   border: 1px solid var(--border_color);
+  background: var(--card_bg);
+  color: var(--color_heading);
   font-family: inherit;
   resize: vertical;
 }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../../api/api";
 import PageTransition from "../../components/PageTransition";

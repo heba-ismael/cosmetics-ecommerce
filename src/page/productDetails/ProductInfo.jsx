@@ -54,13 +54,17 @@ const handleShare = async () => {
         text: product.title,
         url: link,
       });
+      setJustShared(true);
     } catch (err) {
       console.error("Share cancelled or failed:", err);
+      return;
     }
   } else {
     await navigator.clipboard.writeText(link);
     toast.success("Link copied!");
+    setJustShared(true);
   }
+  setTimeout(() => setJustShared(false), 1500);
 };
 
   return (
@@ -96,7 +100,12 @@ const handleShare = async () => {
                   >
                     <FaRegHeart />
                   </button>
-                  <button type="button" onClick={handleShare} aria-label={`Share ${product.title}`}>
+                  <button
+                    type="button"
+                    className={justShared ? "shared" : ""}
+                    onClick={handleShare}
+                    aria-label={`Share ${product.title}`}
+                  >
                     <FaShare />
                   </button>
                 </div>

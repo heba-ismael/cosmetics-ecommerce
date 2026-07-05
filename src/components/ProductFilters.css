@@ -1,0 +1,101 @@
+.product_filters{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 30px;
+  background: var(--card_bg);
+  border: 1px solid var(--border_color);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 30px;
+}
+
+.filter_group h4{
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: var(--color_heading);
+}
+
+.price_inputs{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price_inputs label{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--p_color);
+}
+
+.price_inputs input{
+  width: 80px;
+  padding: 8px 10px;
+  border: 1px solid var(--border_color);
+  border-radius: 6px;
+  background: var(--card_bg);
+  color: var(--color_heading);
+  font-family: inherit;
+}
+
+.price_sep{
+  margin-top: 16px;
+  color: var(--p_color);
+}
+
+.rating_options{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rating_options button{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 12px;
+  border: 1px solid var(--border_color);
+  border-radius: 20px;
+  background: var(--card_bg);
+  color: var(--color_heading);
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rating_options button svg{
+  fill: #f8d941;
+  font-size: 13px;
+}
+
+.rating_options button.active{
+  background: var(--main_color);
+  border-color: var(--main_color);
+  color: var(--white-color);
+}
+
+.reset_filters{
+  background: transparent;
+  color: var(--main_color);
+  border: 1px solid var(--main_color);
+  padding: 9px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.reset_filters:hover{
+  background: var(--main_color);
+  color: var(--white-color);
+}
+
+@media (max-width: 600px){
+  .product_filters{
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
