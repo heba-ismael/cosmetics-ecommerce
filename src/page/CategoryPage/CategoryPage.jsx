@@ -80,6 +80,20 @@ function CategoryPage() {
               />
             )}
 
+            {allProducts.length > 0 && (
+              <p
+                className="filter_results_count"
+                aria-live="polite"
+                key={filteredProducts.length}
+              >
+                Showing <strong>{filteredProducts.length}</strong> of{" "}
+                {allProducts.length} products
+                {(priceRange[0] !== priceBounds[0] ||
+                  priceRange[1] !== priceBounds[1] ||
+                  minRating > 0) && " · Filtered"}
+              </p>
+            )}
+
             {filteredProducts.length > 0 ? (
               <div className="products">
                 {filteredProducts.map((item) => (

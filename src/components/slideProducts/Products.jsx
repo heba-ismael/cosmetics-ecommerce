@@ -7,6 +7,7 @@ import { CartContext } from "../Context/CartContext";
 import { FaCheck } from "react-icons/fa";
 import toast from "react-hot-toast";
 import StarRating from "../StarRating";
+import "./SlideProducts.css";
 
 function Products({ item }) {
   const navigate = useNavigate();

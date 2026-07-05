@@ -40,7 +40,8 @@ function BtmHeader() {
               aria-label="Browse Category"
             >
               <IoMenu />
-              <p> Browse Category</p>
+              <p className="category_btn_text"> Browse Category</p>
+              <p className="category_btn_text_short">Category</p>
             </button>
             <div
               className={`category_nav_list ${isCategoryOpen ? "active" : ""}`}

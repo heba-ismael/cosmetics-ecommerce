@@ -6,3 +6,19 @@
     justify-content: space-between;
     gap: 20px;
 }
+
+.filter_results_count{
+    font-size: 14px;
+    color: var(--p_color);
+    margin-bottom: 10px;
+    animation: resultsFade 0.3s ease;
+}
+
+.filter_results_count strong{
+    color: var(--main_color);
+}
+
+@keyframes resultsFade{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
