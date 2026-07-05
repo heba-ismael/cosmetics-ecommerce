@@ -376,7 +376,7 @@ background: #d41756;
         flex: 1;
         overflow-x: auto;
         white-space: nowrap;
-        justify-content: flex-end;
+        justify-content: flex-start;
         padding-right: 15px;
         -webkit-overflow-scrolling: touch;
     }
