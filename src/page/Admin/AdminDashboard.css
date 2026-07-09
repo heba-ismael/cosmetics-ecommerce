@@ -162,7 +162,8 @@
 .admin_row_actions button{
   background: var(--bg_color);
   color: var(--color_heading);
-  padding: 6px 12px;
+  padding: 8px 14px;
+  min-height: 34px;
   border-radius: 6px;
   font-size: 12px;
   cursor: pointer;

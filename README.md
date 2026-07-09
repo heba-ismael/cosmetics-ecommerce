@@ -2,6 +2,11 @@
 
 A modern e-commerce front-end for women's beauty products, bags, and shoes — built with React and Vite.
 
+## 🔗 Live Demo
+
+- **Site:** [cosmatics-ecommerce.vercel.app](https://cosmatics-ecommerce.vercel.app)
+- **Admin dashboard preview:** [/admin](https://cosmatics-ecommerce.vercel.app/admin)
+
 ## ✨ Features
 
 - Browse products by category (Beauty, Women's Bags, Women's Shoes)
@@ -14,6 +19,7 @@ A modern e-commerce front-end for women's beauty products, bags, and shoes — b
 - Toast notifications for cart, favorites, and share actions
 - Code-split routes for faster initial load
 - Global error boundary
+- Admin dashboard preview (`/admin`) — products, orders, and category management UI (not yet connected to a backend)
 
 ## 🛠️ Built With
 
@@ -92,3 +98,4 @@ src/
 - Checkout is simulated (no real payment/shipping flow)
 - Sign Up is simulated (DummyJSON doesn't persist new users)
 - No pagination yet — categories load a fixed number of products
+- Admin dashboard is a UI preview only — product/category edits don't persist (no backend connected)

@@ -66,10 +66,12 @@ function AdminDashboard() {
         </div>
 
         <div className="admin_layout">
-          <aside className="admin_sidebar">
+          <aside className="admin_sidebar" role="tablist" aria-label="Admin sections">
             {TABS.map((tab) => (
               <button
                 key={tab.id}
+                role="tab"
+                aria-selected={activeTab === tab.id}
                 className={activeTab === tab.id ? "active" : ""}
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -144,10 +146,16 @@ function AdminDashboard() {
                             <td>${p.price}</td>
                             <td>{p.stock}</td>
                             <td className="admin_row_actions">
-                              <button onClick={notConnected}>Edit</button>
+                              <button
+                                onClick={notConnected}
+                                aria-label={`Edit ${p.title}`}
+                              >
+                                Edit
+                              </button>
                               <button
                                 className="danger"
                                 onClick={notConnected}
+                                aria-label={`Delete ${p.title}`}
                               >
                                 Delete
                               </button>
@@ -215,7 +223,9 @@ function AdminDashboard() {
                     {categories.map((cat) => (
                       <div className="category_card" key={cat.slug}>
                         <p>{cat.name}</p>
-                        <button onClick={notConnected}>Edit</button>
+                        <button onClick={notConnected} aria-label={`Edit ${cat.name}`}>
+                          Edit
+                        </button>
                       </div>
                     ))}
                   </div>
