@@ -4,23 +4,6 @@
   margin: 0 auto;
 }
 
-.admin_preview_banner{
-  background: #fff4e5;
-  color: #7a5416;
-  border: 1px solid #f0c674;
-  border-radius: 8px;
-  padding: 14px 18px;
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-:root[data-theme="dark"] .admin_preview_banner{
-  background: #4a3a1f;
-  color: #ffcb7d;
-  border-color: #6b5228;
-}
-
 .admin_layout{
   display: flex;
   gap: 25px;

@@ -48,23 +48,14 @@ function AdminDashboard() {
     loadData();
   }, []);
 
-  // This is a visual preview only — there's no backend yet, so these
-  // actions just show what the interaction would feel like.
-  const notConnected = () =>
-    toast.error("Not connected to a database yet — this is a preview only.");
+  // Not connected to a backend yet, so these actions don't persist anything.
+  const notConnected = () => toast.error("No data available");
 
   const totalRevenue = orders.reduce((acc, o) => acc + o.total, 0);
 
   return (
     <PageTransition>
       <div className="admin_page">
-        <div className="admin_preview_banner">
-          <strong>Preview mode:</strong> this dashboard isn't connected to a
-          real database yet. Products come from the demo API (read-only), and
-          Orders show your real local orders. Add/Edit/Delete are disabled
-          until a backend (like Firebase or Supabase) is connected.
-        </div>
-
         <div className="admin_layout">
           <aside className="admin_sidebar" role="tablist" aria-label="Admin sections">
             {TABS.map((tab) => (
@@ -146,10 +137,7 @@ function AdminDashboard() {
                             <td>${p.price}</td>
                             <td>{p.stock}</td>
                             <td className="admin_row_actions">
-                              <button
-                                onClick={notConnected}
-                                aria-label={`Edit ${p.title}`}
-                              >
+                              <button onClick={notConnected} aria-label={`Edit ${p.title}`}>
                                 Edit
                               </button>
                               <button
